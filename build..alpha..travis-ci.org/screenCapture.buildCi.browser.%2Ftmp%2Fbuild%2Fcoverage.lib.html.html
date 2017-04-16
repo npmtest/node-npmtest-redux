@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-redux/redux/lib/combineReducers.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-redux/node_modules/redux/lib/combineReducers.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-redux">npmtest-redux (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-redux/redux/lib/combineReducers.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-redux/node_modules/redux/lib/combineReducers.js</span></h1>
     <h2>
         
         Statements: <span class="metric">17.57% <small>(13 / 74)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-redux/redux/lib/</a> &#187; combineReducers.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-redux/node_modules/redux/lib/</a> » combineReducers.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -515,50 +513,50 @@ var _warning2 = _interopRequireDefault(_warning);
 &nbsp;
 function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { 'default': obj }; }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getUndefinedStateErrorMessage(key, action) {</span>
-<span class="cstat-no" title="statement not covered" >  var actionType = action &amp;&amp; action.type;</span>
-<span class="cstat-no" title="statement not covered" >  var actionName = actionType &amp;&amp; '"' + actionType.toString() + '"' || 'an action';</span>
+<span class="fstat-no" title="function not covered">function getUndefinedStateErrorMessage(key, action) {</span>
+<span class="cstat-no" title="statement not covered">  var actionType = action &amp;&amp; action.type;</span>
+<span class="cstat-no" title="statement not covered">  var actionName = actionType &amp;&amp; '"' + actionType.toString() + '"' || 'an action';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return 'Given action ' + actionName + ', reducer "' + key + '" returned undefined. ' + 'To ignore an action, you must explicitly return the previous state.';</span>
+<span class="cstat-no" title="statement not covered">  return 'Given action ' + actionName + ', reducer "' + key + '" returned undefined. ' + 'To ignore an action, you must explicitly return the previous state.';</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {</span>
-<span class="cstat-no" title="statement not covered" >  var reducerKeys = Object.keys(reducers);</span>
-<span class="cstat-no" title="statement not covered" >  var argumentName = action &amp;&amp; action.type === _createStore.ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';</span>
+<span class="fstat-no" title="function not covered">function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {</span>
+<span class="cstat-no" title="statement not covered">  var reducerKeys = Object.keys(reducers);</span>
+<span class="cstat-no" title="statement not covered">  var argumentName = action &amp;&amp; action.type === _createStore.ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (reducerKeys.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';</span>
+<span class="cstat-no" title="statement not covered">  if (reducerKeys.length === 0) {</span>
+<span class="cstat-no" title="statement not covered">    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!(0, _isPlainObject2['default'])(inputState)) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'The ' + argumentName + ' has unexpected type of "' + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + '". Expected argument to be an object with the following ' + ('keys: "' + reducerKeys.join('", "') + '"');</span>
+<span class="cstat-no" title="statement not covered">  if (!(0, _isPlainObject2['default'])(inputState)) {</span>
+<span class="cstat-no" title="statement not covered">    return 'The ' + argumentName + ' has unexpected type of "' + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + '". Expected argument to be an object with the following ' + ('keys: "' + reducerKeys.join('", "') + '"');</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var unexpectedKeys = Object.keys(inputState).filter(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return !reducers.hasOwnProperty(key) &amp;&amp; !unexpectedKeyCache[key];</span>
+<span class="cstat-no" title="statement not covered">  var unexpectedKeys = Object.keys(inputState).filter(<span class="fstat-no" title="function not covered">function (key) {</span></span>
+<span class="cstat-no" title="statement not covered">    return !reducers.hasOwnProperty(key) &amp;&amp; !unexpectedKeyCache[key];</span>
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  unexpectedKeys.forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
-<span class="cstat-no" title="statement not covered" >    unexpectedKeyCache[key] = true;</span>
+<span class="cstat-no" title="statement not covered">  unexpectedKeys.forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
+<span class="cstat-no" title="statement not covered">    unexpectedKeyCache[key] = true;</span>
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (unexpectedKeys.length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'Unexpected ' + (unexpectedKeys.length &gt; 1 ? 'keys' : 'key') + ' ' + ('"' + unexpectedKeys.join('", "') + '" found in ' + argumentName + '. ') + 'Expected to find one of the known reducer keys instead: ' + ('"' + reducerKeys.join('", "') + '". Unexpected keys will be ignored.');</span>
+<span class="cstat-no" title="statement not covered">  if (unexpectedKeys.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">    return 'Unexpected ' + (unexpectedKeys.length &gt; 1 ? 'keys' : 'key') + ' ' + ('"' + unexpectedKeys.join('", "') + '" found in ' + argumentName + '. ') + 'Expected to find one of the known reducer keys instead: ' + ('"' + reducerKeys.join('", "') + '". Unexpected keys will be ignored.');</span>
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function assertReducerSanity(reducers) {</span>
-<span class="cstat-no" title="statement not covered" >  Object.keys(reducers).forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var reducer = reducers[key];</span>
-<span class="cstat-no" title="statement not covered" >    var initialState = reducer(undefined, { type: _createStore.ActionTypes.INIT });</span>
+<span class="fstat-no" title="function not covered">function assertReducerSanity(reducers) {</span>
+<span class="cstat-no" title="statement not covered">  Object.keys(reducers).forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
+<span class="cstat-no" title="statement not covered">    var reducer = reducers[key];</span>
+<span class="cstat-no" title="statement not covered">    var initialState = reducer(undefined, { type: _createStore.ActionTypes.INIT });</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (typeof initialState === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >      throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined.');</span>
+<span class="cstat-no" title="statement not covered">    if (typeof initialState === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">      throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined.');</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof reducer(undefined, { type: type }) === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + _createStore.ActionTypes.INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined.');</span>
+<span class="cstat-no" title="statement not covered">    var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');</span>
+<span class="cstat-no" title="statement not covered">    if (typeof reducer(undefined, { type: type }) === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + _createStore.ActionTypes.INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined.');</span>
     }
   });
 }
@@ -579,72 +577,73 @@ function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? ob
  * @returns {Function} A reducer function that invokes every reducer inside the
  * passed object, and builds a state object with the same shape.
  */
-<span class="fstat-no" title="function not covered" >function combineReducers(reducers) {</span>
-<span class="cstat-no" title="statement not covered" >  var reducerKeys = Object.keys(reducers);</span>
-<span class="cstat-no" title="statement not covered" >  var finalReducers = {};</span>
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; reducerKeys.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    var key = reducerKeys[i];</span>
+<span class="fstat-no" title="function not covered">function combineReducers(reducers) {</span>
+<span class="cstat-no" title="statement not covered">  var reducerKeys = Object.keys(reducers);</span>
+<span class="cstat-no" title="statement not covered">  var finalReducers = {};</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; reducerKeys.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    var key = reducerKeys[i];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (process.env.NODE_ENV !== 'production') {</span>
-<span class="cstat-no" title="statement not covered" >      if (typeof reducers[key] === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >        (0, _warning2['default'])('No reducer provided for key "' + key + '"');</span>
+<span class="cstat-no" title="statement not covered">    if (process.env.NODE_ENV !== 'production') {</span>
+<span class="cstat-no" title="statement not covered">      if (typeof reducers[key] === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">        (0, _warning2['default'])('No reducer provided for key "' + key + '"');</span>
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (typeof reducers[key] === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >      finalReducers[key] = reducers[key];</span>
+<span class="cstat-no" title="statement not covered">    if (typeof reducers[key] === 'function') {</span>
+<span class="cstat-no" title="statement not covered">      finalReducers[key] = reducers[key];</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  var finalReducerKeys = Object.keys(finalReducers);</span>
+<span class="cstat-no" title="statement not covered">  var finalReducerKeys = Object.keys(finalReducers);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.env.NODE_ENV !== 'production') {</span>
-<span class="cstat-no" title="statement not covered" >    var unexpectedKeyCache = {};</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.NODE_ENV !== 'production') {</span>
+<span class="cstat-no" title="statement not covered">    var unexpectedKeyCache = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var sanityError;</span>
-<span class="cstat-no" title="statement not covered" >  try {</span>
-<span class="cstat-no" title="statement not covered" >    assertReducerSanity(finalReducers);</span>
+<span class="cstat-no" title="statement not covered">  var sanityError;</span>
+<span class="cstat-no" title="statement not covered">  try {</span>
+<span class="cstat-no" title="statement not covered">    assertReducerSanity(finalReducers);</span>
   } catch (e) {
-<span class="cstat-no" title="statement not covered" >    sanityError = e;</span>
+<span class="cstat-no" title="statement not covered">    sanityError = e;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >function combination() {</span></span>
-<span class="cstat-no" title="statement not covered" >    var state = arguments.length &lt;= 0 || arguments[0] === undefined ? {} : arguments[0];</span>
-<span class="cstat-no" title="statement not covered" >    var action = arguments[1];</span>
+<span class="cstat-no" title="statement not covered">  return <span class="fstat-no" title="function not covered">function combination() {</span></span>
+<span class="cstat-no" title="statement not covered">    var state = arguments.length &lt;= 0 || arguments[0] === undefined ? {} : arguments[0];</span>
+<span class="cstat-no" title="statement not covered">    var action = arguments[1];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (sanityError) {</span>
-<span class="cstat-no" title="statement not covered" >      throw sanityError;</span>
+<span class="cstat-no" title="statement not covered">    if (sanityError) {</span>
+<span class="cstat-no" title="statement not covered">      throw sanityError;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (process.env.NODE_ENV !== 'production') {</span>
-<span class="cstat-no" title="statement not covered" >      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);</span>
-<span class="cstat-no" title="statement not covered" >      if (warningMessage) {</span>
-<span class="cstat-no" title="statement not covered" >        (0, _warning2['default'])(warningMessage);</span>
+<span class="cstat-no" title="statement not covered">    if (process.env.NODE_ENV !== 'production') {</span>
+<span class="cstat-no" title="statement not covered">      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);</span>
+<span class="cstat-no" title="statement not covered">      if (warningMessage) {</span>
+<span class="cstat-no" title="statement not covered">        (0, _warning2['default'])(warningMessage);</span>
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var hasChanged = false;</span>
-<span class="cstat-no" title="statement not covered" >    var nextState = {};</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; finalReducerKeys.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      var key = finalReducerKeys[i];</span>
-<span class="cstat-no" title="statement not covered" >      var reducer = finalReducers[key];</span>
-<span class="cstat-no" title="statement not covered" >      var previousStateForKey = state[key];</span>
-<span class="cstat-no" title="statement not covered" >      var nextStateForKey = reducer(previousStateForKey, action);</span>
-<span class="cstat-no" title="statement not covered" >      if (typeof nextStateForKey === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >        var errorMessage = getUndefinedStateErrorMessage(key, action);</span>
-<span class="cstat-no" title="statement not covered" >        throw new Error(errorMessage);</span>
+<span class="cstat-no" title="statement not covered">    var hasChanged = false;</span>
+<span class="cstat-no" title="statement not covered">    var nextState = {};</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; finalReducerKeys.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      var key = finalReducerKeys[i];</span>
+<span class="cstat-no" title="statement not covered">      var reducer = finalReducers[key];</span>
+<span class="cstat-no" title="statement not covered">      var previousStateForKey = state[key];</span>
+<span class="cstat-no" title="statement not covered">      var nextStateForKey = reducer(previousStateForKey, action);</span>
+<span class="cstat-no" title="statement not covered">      if (typeof nextStateForKey === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">        var errorMessage = getUndefinedStateErrorMessage(key, action);</span>
+<span class="cstat-no" title="statement not covered">        throw new Error(errorMessage);</span>
       }
-<span class="cstat-no" title="statement not covered" >      nextState[key] = nextStateForKey;</span>
-<span class="cstat-no" title="statement not covered" >      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;</span>
+<span class="cstat-no" title="statement not covered">      nextState[key] = nextStateForKey;</span>
+<span class="cstat-no" title="statement not covered">      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;</span>
     }
-<span class="cstat-no" title="statement not covered" >    return hasChanged ? nextState : state;</span>
+<span class="cstat-no" title="statement not covered">    return hasChanged ? nextState : state;</span>
   };
 }
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 06:23:46 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 09:10:18 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
