@@ -1,6 +1,6 @@
 # npmtest-redux
 
-#### test coverage for  [redux (v3.6.0)](http://redux.js.org)  [![npm package](https://img.shields.io/npm/v/npmtest-redux.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-redux) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-redux.svg)](https://travis-ci.org/npmtest/node-npmtest-redux)
+#### basic test coverage for  [redux (v3.6.0)](http://redux.js.org)  [![npm package](https://img.shields.io/npm/v/npmtest-redux.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-redux) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-redux.svg)](https://travis-ci.org/npmtest/node-npmtest-redux)
 
 #### Predictable state container for JavaScript apps
 
